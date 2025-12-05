@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintomas</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        line-height: 1.6;
+        background-color: #ffffff;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        background-color: #ff3c9b;
+        height: 125px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav ul li a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #ffcde5;
+    }
+
+    section.pacotes {
+        padding: 90px 10%;
+        background-color: #ffeaf4;
+        text-align: center;
+    }
+
+    section.pacotes h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 36px;
+        color: #ff2f93;
+        margin-bottom: 50px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 75px;
+        width: 1000px;
+        height: 350px;
+    }
+
+    .card {
+        background: #ffeaf4;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .card-body h4 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        color: #ff3496;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .texto {
+        background-color: #ffffff;
+        padding: 80px;
+    }
+
+    .texto h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #ff2f93;
+    }
+
+    .texto p {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #000000;
+    }
+
+    footer {
+        background-color: #ff3c9b;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <header>
+
+        <div class="container">
+            <h1>Outubro Rosa</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="sintomas.html">Sintomas</a>
+                    </li>
+                    <li>
+                        <a href="prevencao.html">Prevenção</a>
+                    </li>
+                    <li>
+                        <a href="tratamento.html">Tratamentos</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="pacotes">
+        <h2>Sintomas</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="imagens/1img.PNG" alt="">
+                <div class="card-body">
+                    <h4>Nódulos</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagens/2img.PNG" alt="">
+                <div class="card-body">
+                    <h4>Mudanças no Formato da Mama</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagens/3img.PNG" alt="">
+                <div class="card-body">
+                    <h4>Secreção Anormal pelos Mamilos</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagens/4img.PNG" alt="">
+                <div class="card-body">
+                    <h4>Alterações na Pele</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="texto">
+        <h2>Quais são os sintomas mais comuns?</h2>
+        <p>
+            O câncer de mama pode se manifestar de várias formas, e é importante ficar atento a sinais
+            que podem indicar a doença. Entre os sintomas mais comuns estão: nódulos ou caroços na mama
+            ou na região da axila, mudanças no tamanho ou formato da mama, alterações na pele como vermelhidão,
+            retração ou ondulações, e secreção anormal pelos mamilos, que pode ser sanguinolenta. Sensibilidade
+            ou dor persistente em determinada área da mama também pode ser um alerta. Reconhecer esses sinais
+            precocemente é fundamental para buscar avaliação médica imediata e aumentar as chances de tratamento eficaz.
+        </p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Outubro Rosa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

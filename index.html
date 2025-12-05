@@ -1,262 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outubro Rosa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outubro Rosa</title>
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-        line-height: 1.6;
-    }
+  body {
+    line-height: 1.6;
+    background-color: #ff2f93;
+  }
 
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-    }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
-    header {
-        display: flex;
-        background-color: #fd4196;
-        height: 245px;
-    }
+  header {
+    display: flex;
+    background-color: #ff3c9b;
+    height: 125px;
+  }
 
-    .link-admin {
-        text-decoration: none;
-        position: absolute;
-        right: 0;
-        color: white;
-        padding-right: 20px;
-    }
+  .link-admin {
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    color: white;
+    padding-right: 20px;
+  }
 
-    .link-admin :hover {
-        font-weight: bold;
-        text-decoration: underline;
-        color: rgb(184, 77, 121);
-    }
+  .link-admin :hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(184, 77, 121);
+  }
 
-    header h1 {
-        text-align: center;
-        font-size: 50px;
-        margin-bottom: 10px;
-        color: white;
-    }
+  header h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: white;
+  }
 
-    nav ul {
-        list-style: none;
-        text-align: center;
-    }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
 
-    nav ul li {
-        display: inline;
-        margin-right: 20px;
-        font-weight: bold;
-    }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-weight: bold;
+  }
 
-    nav ul li a{
-        color: white;
-        text-decoration: none;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
 
-    nav ul li a:hover {
-        font-weight: bold;
-        text-decoration: underline;
-        color: rgb(237, 31, 117);
-    }
+  nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ffcde5;
+  }
 
-    .img-carrossel {
-        width: 100%;
-        height: 100%;
-        object-fit: auto;
-        height: 350px;
-    }
+  .img-carrossel {
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+    margin-bottom: 0px;
+  }
 
-    .container h2 {
-        text-align: center;
-        font-size: 30px;
-        color: rgb(244, 166, 187);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin-top: 50px;
-    }
+  .textinho {
+    background-color: #ff2f93;
+    width: 100%;
+    height: 45px;
+    margin-top: 0px;
+  }
 
-    .container h2 p {
-        text-align: center;
-        font-size: 30px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  .textinho p {
+    margin-left: 30px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+  }
 
-    .container p {
-        text-align: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  section.pacotes {
+    padding: 90px 10%;
+    background-color: #ffeaf4;
+    text-align: center;
+  }
 
-    .menu-cardapio-itens {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 30px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  section.pacotes h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+    color: #ff2f93;
+    margin-bottom: 50px;
+  }
 
-    .menu-cardapio-item{
-        border: 1px solid rgb(255, 255, 255);
-        border-radius: 3px;
-        width: 30%;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(255, 231, 244, 0.5);
-        margin: 20px;
-    }
+  .cards {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    gap: 14px;
+    width: 1000px;
+    height: 420px;
+  }
 
-    .menu-cardapio-item h3 {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  .card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
 
-    .menu-cardapio-item p {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+  }
 
-    .menu-cardapio h2 {
-        text-align: center;
-        font-size: 30px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: rgb(255, 164, 189);
-    }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px #ff68b1;
+  }
 
-    footer {
-        background-color:rgb(253, 186, 227);
-        color:rgb(255, 255, 255);
-        text-align: center;
-        padding: 10px;
-    }
+  .card img {
+    width: 100%;
+    height: 42%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
 
-    .button {
-        align-items: center;
-        margin-left: 44%;
-        margin-bottom: 60px;
-        margin-top: 25px;
-    }
+  .card-body {
+    padding: 25px;
+    text-align: left;
+  }
 
-    .link-reserva {
-        background-color: rgb(254, 129, 168);
-        padding: 15px;
-        border-radius: 25px;
-        border: white;
-        color: white;
-        cursor: pointer;
-        text-decoration: none;
-    }
+  .card-body h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: #f0cd5d;
+    margin-bottom: 10px;
+  }
+
+  .card-body p {
+    color: #3f3f3f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .saiba-mais {
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ff2f93;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    margin-top: 45px;
+  }
+
+  .saiba-mais:hover {
+    border-color: #ff2f93;
+    color: #000000;
+  }
+
+  .sobre {
+    background-color: #ffffff;
+  }
+
+  .container h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ff3c9b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+  }
+
+  .container h2 p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .container p {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    background-color: #ff3c9b;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+  }
 </style>
 
 <body>
-    <header>
-        <a href="pages/admin.html" class="link-admin">Admin</a>
+  <header>
 
-        <div class="container">
-            <h1>Outubro Rosa</h1>
-
-            <nav>
-                <ul>
-                    <li>
-                    <a href="index.html">Início</a>
-                    </li>
-                    <li>
-                    <a href="sobre.html">Sobre</a>   
-                    </li>
-                    <li>
-                    <a href="contato.html">Contato</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-
-    <section class="carrossel">
-        <div>
-            <img class="img-carrossel" id="img-carrossel" src="" alt="">
-        </div>
-    </section>
-
-<section class="sobre">
     <div class="container">
-        <h2>Sobre Nós</h2>
-        <p>
-            Somos uma empresa dedicada a criar bolos
-            deliciosos e personalizados para todas as ocasiões. <br/> Nossa paixão 
-            pela confeitaria é refletida em cada criação que sai da nossa cozinha.
-        </p>
+      <h1>Outubro Rosa</h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Início</a>
+          </li>
+          <li>
+            <a href="sintomas.html">Sintomas</a>
+          </li>
+          <li>
+            <a href="prevencao.html">Prevenção</a>
+          </li>
+          <li>
+            <a href="tratamento.html">Tratamentos</a>
+          </li>
+          <li>
+            <a href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
+
     </div>
-</section>
+  </header>
 
-<div class="button">
-    <a href="pages/reserva.html" class="link-reserva">Ler Mais</a>
-</div>
-
-
-<section class="menu-cardapio">
-    <h2>Nosso Cardápio</h2>
-
-    <div class="menu-cardapio-itens">
-        <div class="menu-cardapio-item">
-            <h3>Bolo de Chocolate com Mel</h3>
-            <p>Um classico irresistivel com camadas de chocolate</p>
-        </div>
-
-        <div class="menu-cardapio-item">
-            <h3>Bolo de Chocolate no pote</h3>
-            <p>Fresco e delicioso, perfeito para qualquer ocasião</p>
-        </div>
-
-        <div class="menu-cardapio-item">
-            <h3>Bolo de Chocolate</h3>
-            <p>Uma delicia tradicional com cobertura de chocolate</p>
-        </div>
+  <section class="carrossel">
+    <div>
+      <img class="img-carrossel" id="img-carrossel" src="" alt="">
     </div>
-</section>
+  </section>
 
 
-<footer>
+  <section class="textinho">
+    <p>FAÇA O AUTOEXAME! UM TOQUE PODE FAZER TODA A DIFERENÇA</p>
+  </section>
+
+
+  <section class="pacotes">
+    <h2>Orientações</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="imagens/imagem1.PNG" alt="">
+        <div class="card-body">
+          <h4>Sintomas</h4>
+          <p>Fique atento aos sinais que podem indicar o câncer de mama</p>
+          <a href="sintomas.html" class="saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/imagem2.PNG" alt="">
+        <div class="card-body">
+          <h4>Prevenção</h4>
+          <p>Manter hábitos saudáveis pode reduzir os riscos do câncer</p>
+          <a href="prevencao.html" class="saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/imagem3.PNG" alt="">
+        <div class="card-body">
+          <h4>Tratamento</h4>
+          <p>Os tratamentos variam de acordo com o estágio da doença</p>
+          <a href="tratamento.html" class="saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre">
     <div class="container">
-        <p>&copy; 2025 Outubro Rosa. Todos os direitos reservados.</p>
+      <h2>Sobre Nós</h2>
+      <p>
+        "Somos uma empresa comprometida com a causa do Outubro Rosa, dedicada a promover a <br>
+        conscientização sobre o câncer de mama. Através de iniciativas como essa, buscamos informar, <br>
+        apoiar e engajar a comunidade para a importância da detecção precoce e do cuidado contínuo. <br>
+        Juntos, podemos fazer a diferença na luta contra o câncer de mama!"
+      </p>
     </div>
-</footer>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Outubro Rosa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 <script>
-    let imagens = [
+  let imagens = [
     'imagens/banner1.PNG',
     'imagens/banner2.PNG',
-    'imagens/banner3.PNG'
-]
+    'imagens/banner3.PNG',
+  ]
 
-let indiceAtualListaImagem = 0
+  let indiceAtualListaImagem = 0
 
-function exibirImagem() {
+  function exibirImagem() {
     let imagemCarrossel = document
-        .getElementById('img-carrossel')
+      .getElementById('img-carrossel')
     imagemCarrossel.src = imagens[indiceAtualListaImagem]
-}
+  }
 
-setInterval(function() {
+  setInterval(function () {
     exibirImagem()
     indiceAtualListaImagem++
 
     if (indiceAtualListaImagem > 2) {
-        indiceAtualListaImagem = 0
+      indiceAtualListaImagem = 0
     }
 
-}, 5000);
+  }, 4000);
 
-exibirImagem()
-indiceAtualListaImagem++ 
+  exibirImagem()
+  indiceAtualListaImagem++ 
 </script>
 
 </html>
